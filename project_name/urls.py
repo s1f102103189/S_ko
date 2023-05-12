@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from attence import views as attence_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('attence/', include('attence.urls')),
+    path('', include('attence.urls')),
 ]

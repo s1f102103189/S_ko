@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Employee
+from attence.models import Employee
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.http import Http404, JsonResponse
 
 def check_in(request, employee_id):
     employee = get_object_or_404(Employee, pk=employee_id)
